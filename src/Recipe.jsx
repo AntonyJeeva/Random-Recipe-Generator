@@ -11,12 +11,15 @@ function Recipe() {
     const getRecipe = () =>
     {
      axios.get('https://www.themealdb.com/api/json/v1/1/random.php').then((response) =>{/* console.log(response.data.meals) */
-    setRecipes(response.data.meals)
-    }) }
+    setRecipes(response.data.meals)}) 
+    .catch(function (error) {
+        console.log(error);
+      })
+    }
 
     useEffect(()=>{
         getRecipe()
-        console.log('i fire once')
+        
     }, [])
 
  

@@ -29,12 +29,17 @@
 }
 
 .instruction, .cuisine, h4{
-    
-    padding: 10px;
-    font-weight: lighter;
+    padding: 10px 30px;
     line-height: 1.8;
     
 }
+
+.instruction, .ingredients, .cuisinename{
+   text-align: justify;
+   font-weight: lighter;
+
+}
+
 
 .video{
     display: flex;

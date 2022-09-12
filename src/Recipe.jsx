@@ -10,12 +10,13 @@ function Recipe() {
 
     const getRecipe = () =>
     {
-     axios.get('https://www.themealdb.com/api/json/v1/1/random.php').then((response) =>{console.log(response.data.meals)
+     axios.get('https://www.themealdb.com/api/json/v1/1/random.php').then((response) =>{/* console.log(response.data.meals) */
     setRecipes(response.data.meals)
     }) }
 
     useEffect(()=>{
         getRecipe()
+        console.log('i fire once')
     }, [])
 
  
@@ -40,12 +41,12 @@ function Recipe() {
             return(
                 <article key={idMeal} >  
                 <h2 className='mealname'> {strMeal} </h2>
-                <h3 className='cuisine'> <span> Cuisine :  </span> {strArea} </h3>
+                <h3 className='cuisine'> <span> Cuisine :  </span> <span className="cuisinename"> {strArea} </span> </h3>
 
-                <h4><span>Ingredients : </span> {strMeasure1} {strIngredient1} &nbsp;&nbsp; {strMeasure2} {strIngredient2} &nbsp; {strMeasure3} {strIngredient3} &nbsp; {strMeasure4} {strIngredient4} &nbsp; {strMeasure5} {strIngredient5} &nbsp;
+                <h4><span>Ingredients : </span> <span className="ingredients">{strMeasure1} {strIngredient1} &nbsp;&nbsp; {strMeasure2} {strIngredient2} &nbsp; {strMeasure3} {strIngredient3} &nbsp; {strMeasure4} {strIngredient4} &nbsp; {strMeasure5} {strIngredient5} &nbsp;
                 {strMeasure6} {strIngredient6} &nbsp; {strMeasure7} {strIngredient7}&nbsp; {strMeasure8} {strIngredient8} &nbsp; {strMeasure9} {strIngredient9} &nbsp; {strMeasure10} {strIngredient10} &nbsp;
                 {strMeasure11} {strIngredient11} &nbsp; {strMeasure12} {strIngredient12} &nbsp; {strMeasure13} {strIngredient13} &nbsp; {strMeasure14} {strIngredient14} &nbsp; {strMeasure15} {strIngredient15} &nbsp;
-                {strMeasure16} {strIngredient16} &nbsp; {strMeasure17} {strIngredient17} &nbsp; {strMeasure18} {strIngredient18} &nbsp; {strMeasure19} {strIngredient19} &nbsp; {strMeasure20} {strIngredient20}</h4>
+                {strMeasure16} {strIngredient16} &nbsp; {strMeasure17} {strIngredient17} &nbsp; {strMeasure18} {strIngredient18} &nbsp; {strMeasure19} {strIngredient19} &nbsp; {strMeasure20} {strIngredient20}</span></h4>
                 
                 <p className='instruction'> <span >How to Cook : </span>  {strInstructions}</p>
 

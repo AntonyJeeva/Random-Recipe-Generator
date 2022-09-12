@@ -49,13 +49,17 @@ function Recipe() {
                 
                 <p className='instruction'> <span >How to Cook : </span>  {strInstructions}</p>
 
-                <button className="source" onClick={()=>{window.open(strSource, '_blank')}}  >Source</button>
+                <button className="source" onClick={()=>{window.open(strSource, '_blank')}}  >Source for the recipe</button>
 
                 <div className='video'>
                 <ReactPlayer /* style = {playerstyle } */ controls url={strYoutube} />
                 
                 <img src={strMealThumb} alt = {strMeal}/>
+
+                
                 </div>
+                <button className="source" onClick={()=>{window.open('https://github.com/AntonyJeeva/Random-Recipe-Generator', '_blank')}}  >Github Repo</button>
+                <button className="source" onClick={()=>{window.open('https://antonyjeeva.carrd.co/', '_blank')}}  >Portfolio</button>
                 </article>
             )
         })}

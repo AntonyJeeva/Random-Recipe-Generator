@@ -12,5 +12,6 @@ It generates random recipes <br />
 
 # Screenshots 
 
-![food api 1](https://user-images.githubusercontent.com/44425375/189891102-aa8d32f5-6937-4fa0-ad50-d237e87b68b7.png)
+
 ![food api 2](https://user-images.githubusercontent.com/44425375/189891121-a4f806b3-b35c-4cdb-9bf6-94f77713e85e.png)
+![food api 1](https://user-images.githubusercontent.com/44425375/189891102-aa8d32f5-6937-4fa0-ad50-d237e87b68b7.png)
